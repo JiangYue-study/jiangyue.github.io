@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面无法访问</title>
+    <link rel="icon" type="image/x-icon" href="./images/dabao.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .error-icon {
+            font-size: 60px;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .error-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #212529;
+        }
+
+        .error-desc {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* 按钮样式 */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .error-btn {
+            padding: 10px 24px;
+            font-size: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back {
+            background-color: #0d6efd;
+            color: #fff;
+        }
+
+        .btn-refresh {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .error-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">❌</div>
+        <h1 class="error-title">这网站找不到了！</h1>
+        <p class="error-desc">
+           它可能还在赶来的路上! <br>
+           先去看看别的不用等了
+            
+        </p>
+        <!-- 功能按钮组 -->
+        <div class="btn-group">
+            <button class="error-btn btn-back" onclick="goBack()">返回上一页</button>
+            <button class="error-btn btn-refresh" onclick="refreshPage()">刷新当前页面</button>
+        </div>
+    </div>
+
+    <script>
+        // 返回上一页功能
+        function goBack() {
+            window.history.back();
+        }
+
+        // 刷新当前页面功能
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>
